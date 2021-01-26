@@ -1,0 +1,15 @@
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.Resource.R.resources
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.csproj.GenerateResource.cache
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.csproj.CoreCompileInputs.cache
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.RazorAssemblyInfo.cache
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.RazorAssemblyInfo.cs
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.AssemblyInfoInputs.cache
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.AssemblyInfo.cs
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\bin\Debug\netcoreapp2.1\PaymentAPI.deps.json
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\bin\Debug\netcoreapp2.1\PaymentAPI.runtimeconfig.json
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\bin\Debug\netcoreapp2.1\PaymentAPI.runtimeconfig.dev.json
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\bin\Debug\netcoreapp2.1\PaymentAPI.dll
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\bin\Debug\netcoreapp2.1\PaymentAPI.pdb
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.dll
+C:\Users\Kullanici\source\repos\PaymentAPI\PaymentAPI\obj\Debug\netcoreapp2.1\PaymentAPI.pdb
