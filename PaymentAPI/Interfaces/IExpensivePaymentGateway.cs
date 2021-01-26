@@ -9,7 +9,7 @@ namespace PaymentAPI.Interfaces
 	interface IExpensivePaymentGateway
 	{
 		void Add(PaymentEntitity paymentEntitity);
-
+		void Update(PaymentEntitity paymentEntitity);
 		
 	}
 }

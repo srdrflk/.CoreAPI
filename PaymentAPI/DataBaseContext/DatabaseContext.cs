@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PaymentAPI.Constant;
 using PaymentAPI.Models.Entities;
 using System;
 using System.Collections.Generic;
@@ -21,27 +22,8 @@ namespace PaymentAPI.DataBaseContext
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-
-			modelBuilder.Entity<PaymentEntitity>().HasData(
-				new PaymentEntitity
-				{
-					ID = 1,
-					CreditCardNumber = "4938410184689511",
-					CardHolder = "Serdar Filik",
-					ExpirationDate = Convert.ToDateTime("01-05-2025"),
-					SecurityCode = "123",
-					Amount = 200,
-					CreatedDate = DateTime.Now,
-					UpdatedDate = DateTime.Now
-				}
-			);
-
-			modelBuilder.Entity<PaymentStatusEntities>().HasData(
-				new PaymentStatusEntities
-				{
-					ID = 1
-				}
-			);
+			modelBuilder.Entity<PaymentEntitity>().HasAlternateKey(p => p.StatusID);
+				
 		}
 	}
 

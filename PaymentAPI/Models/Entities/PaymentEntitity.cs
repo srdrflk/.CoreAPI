@@ -9,14 +9,12 @@ namespace PaymentAPI.Models.Entities
 {
 	public class PaymentEntitity
 	{
-		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int ID { get; set; }
 
-		public int PaymentStatusEntitiesID { get; set; }
+		public int StatusID { get; set; }
+
 		public PaymentStatusEntities PaymentStatusEntities { get; set; }
-
-		public int PaymentStatusID { get; set; }
-
+		
 		public string CreditCardNumber { get; set; }
 
 		public string CardHolder { get; set; }

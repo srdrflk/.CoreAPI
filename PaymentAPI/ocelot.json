@@ -1,0 +1,21 @@
+{
+	"ReRoutes": [
+		{
+			"DownstreamPathTemplate": "/api/PremiumPayment",
+			"DownstreamScheme": "http",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": "44360"
+				}
+			],
+			"UpstreamPathTemplate": "/PremiumPayment-service/payment"
+		}
+	],
+	"GlobalConfiguration": {
+
+		"BaseUrl": "https://localhost:44359"
+	}
+
+}

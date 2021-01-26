@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Transactions;
 using Microsoft.AspNetCore.Mvc;
 using PaymentAPI.Constant;
+using PaymentAPI.Interfaces;
 using PaymentAPI.Models;
+using PaymentAPI.Models.Entities;
+using PaymentAPI.Repository;
 
 namespace PaymentAPI.Controllers
 {
@@ -12,6 +16,12 @@ namespace PaymentAPI.Controllers
 	[ApiController]
 	public class ValuesController : ControllerBase
 	{
+		private readonly CheapPaymentGateway _cheapPaymentGateway;
+		public ValuesController(CheapPaymentGateway cheapPaymentGateway)
+		{
+			_cheapPaymentGateway = cheapPaymentGateway;
+		}
+
 		// GET api/values
 		[HttpGet]
 		public ActionResult<IEnumerable<string>> Get()
@@ -26,18 +36,25 @@ namespace PaymentAPI.Controllers
 			{
 				if (value.Amount <= 20)
 				{
-					string sss = Enums.Status.Processed.ToString();
+					
+					string sss = Enums.Status.Processed.ToString();//use for state of payment.
 
-					// call ICheapPaymentGateway
-					// db güncelle
+
+					using (var scope = new TransactionScope())
+					{
+						//_cheapPaymentGateway.Add();
+						scope.Complete();
+						return CreatedAtAction(nameof(Get), new { id = value.Amount }, value);
+					}
 				}
 				else if (value.Amount >= 21 && value.Amount <= 500)
 				{
-					// call IExpensivePaymentGateway if exist
+					// call IExpensivePaymentGateway 
 				}
 				else
 				{
-					//call PremiumPaymentService 3times 
+					//call PremiumPaymentService 
+					//Route by Ocelot 
 				}
 
 				// save payment and status

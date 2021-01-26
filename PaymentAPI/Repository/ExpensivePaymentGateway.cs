@@ -1,4 +1,5 @@
-﻿using PaymentAPI.DataBaseContext;
+﻿using Microsoft.EntityFrameworkCore;
+using PaymentAPI.DataBaseContext;
 using PaymentAPI.Interfaces;
 using PaymentAPI.Models.Entities;
 using System;
@@ -19,6 +20,13 @@ namespace PaymentAPI.Repository
 		public void Add(PaymentEntitity paymentEntitity)
 		{
 			_db.Add(paymentEntitity);
+			_db.SaveChanges();
+		}
+
+		public void Update(PaymentEntitity paymentEntitity)
+		{
+			_db.Entry(paymentEntitity).State = EntityState.Modified;
+			_db.SaveChanges();
 		}
 	}
 }
